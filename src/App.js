@@ -7,18 +7,30 @@
 //   return <h1>I like {fav}</h1>;
 // }
 
-function Food({ fav }) {
-  return <h1>I like {fav}</h1>;
+function Food({ name, picture }) {
+  return (
+    <div>
+    <h2>I like {name}</h2>
+    <img src={picture} alt={name} />
+    </div>
+  );
 }
+
+const foodLike = [
+  { name: 'hamberger', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { name: 'pizza', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { name: 'chicken', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { name: 'ramen', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { name: 'kimbab', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { name: 'sushi', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { name: 'tteokbokki', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { name: 'bibimbap', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+];
 
 function App() {
   return (
     <div>
-      <h1>Hello!!!!</h1>
-      <Food fav="hamberger" />
-      <Food fav="ramen" />
-      <Food fav="pizza" />
-      <Food fav="chicken" />
+      {foodLike.map(dish => (<Food name={dish.name} picture={dish.image}/>))}
     </div>
   )
 }
