@@ -17,27 +17,20 @@ function Food({ name, picture }) {
 }
 
 const foodLike = [
-  { name: 'hamberger', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
-  { name: 'pizza', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
-  { name: 'chicken', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
-  { name: 'ramen', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
-  { name: 'kimbab', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
-  { name: 'sushi', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
-  { name: 'tteokbokki', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
-  { name: 'bibimbap', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 1, name: 'hamberger', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 2, name: 'pizza', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 3, name: 'chicken', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 4, name: 'ramen', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 5, name: 'kimbab', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 6, name: 'sushi', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 7, name: 'tteokbokki', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
+  { id: 8, name: 'bibimbap', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
 ];
 
-function renderFood(dish) {
-  return <Food name={dish.name} picture={dish.image} />
-}
-
-// const renderFood = dish => <Food name={dish.name} picture={dish.image} />;
-
 function App() {
-  console.log(foodLike.map(renderFood))
   return (
     <div>
-      {foodLike.map(renderFood)}
+      {foodLike.map(dish => (<Food key={dish.id} name={dish.name} picture={dish.image} />))}
     </div>
   )
 }
