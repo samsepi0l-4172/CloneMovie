@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CloneMovie/static/css/main.86a4c151.css",
+    "main.js": "/CloneMovie/static/js/main.e692fe73.js",
+    "index.html": "/CloneMovie/index.html",
+    "main.86a4c151.css.map": "/CloneMovie/static/css/main.86a4c151.css.map",
+    "main.e692fe73.js.map": "/CloneMovie/static/js/main.e692fe73.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86a4c151.css",
+    "static/js/main.e692fe73.js"
+  ]
+}
