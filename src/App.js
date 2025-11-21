@@ -27,10 +27,17 @@ const foodLike = [
   { name: 'bibimbap', image: 'https://cdn.pixabay.com/photo/2025/08/28/18/42/hamberger-10037363_1280.jpg'},
 ];
 
+function renderFood(dish) {
+  return <Food name={dish.name} picture={dish.image} />
+}
+
+// const renderFood = dish => <Food name={dish.name} picture={dish.image} />;
+
 function App() {
+  console.log(foodLike.map(renderFood))
   return (
     <div>
-      {foodLike.map(dish => (<Food name={dish.name} picture={dish.image}/>))}
+      {foodLike.map(renderFood)}
     </div>
   )
 }
